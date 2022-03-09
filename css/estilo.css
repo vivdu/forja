@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --rojo: #A40101;
+    --azulclaro: #2CA3AB;
+    --gris: #C4C4C4;
+    --naranja: #F3610E;
+    --azuloscuro: #1D1B45;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a, a:hover, a:focus, a:active {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: bold;
+}
+button {
+    cursor: pointer;
+}
+/*ESTILOS INDEX*/
+
+header {
+    display: flex;
+    height: 120px;
+}
+.logo-header{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datos-header{
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: smaller;
+    font-weight: 400;
+}
+.boton-login {
+    width: auto;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: var(--azuloscuro);
+    color: white;
+    border-radius: 10px;
+}
+
+#baner-index{
+    background-image: url(../img/2.\ medico.png);
+    background-position: center;
+    background-size: cover;
+    padding: 7rem 20rem 7rem 1rem;
+    text-align: center; 
+}
+#baner-index h2{ 
+    color: var(--naranja);
+}
+.franja-index img{
+    width: 100%;
+}
+#sintomas {
+    background-image: url(../img/4.\ covid.jpeg);
+    background-position: center;
+    background-size: contain;
+    display: flex;
+}
+.signos {
+    flex-basis: 50%;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.oms {
+    flex-basis: 50%;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.oms img {
+    text-align: center;
+    width: 100px;
+}
+#enlaces {
+    background-color: darkslategray;
+}
+#enlaces p {
+    color: white;
+    padding: 0.8rem;
+    background-color: black;
+}
+footer{
+    height: 5rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* ESTILOS LOGIN */
+
+#loginhtml {
+    background-image: url(../img/10.png);
+    background-position: center;
+    background-size: cover;
+}
+#iniciosesion {
+    margin: 5rem auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.caja-inicio {
+    padding: 0.5rem;
+    text-align: right;
+}
+.boton-inicio {
+    width: auto;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: var(--azuloscuro);
+    color: white;
+    border-radius: 10px;
+}
+.caja-sesion1 {
+    padding: 1rem;
+    width: 400px;
+    text-align: center;
+    display: flexbox;
+    flex-direction: column;
+    background-color: var(--azulclaro);
+    border: 1px solid var(--azulclaro);
+}
+.caja-sesion2 {
+    width: 400px;
+    text-align: center;
+    display: flexbox;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid var(--azulclaro);
+}
+.caja-sesion2 form {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.caja-sesion2 input {
+    border: 1px solid var(--azulclaro);
+    margin: 0.5rem 1rem;
+}
+
+/* ESTILO DASHBOARD */
+
+#dashboard {
+    display: flex;
+}
+.menu {
+    flex-basis: 15%;
+    background-color: var(--azuloscuro);
+    text-align: center;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+}
+.menu img {
+    width: 200px;
+    margin: 5rem 1rem;
+}
+.contenido {
+    flex-basis: 85%;
+    background-image: url(../img/13.\ guerreros.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.boton-menu {
+    border: 2px solid var(--naranja);
+    border-radius: 15px;
+    margin: 1rem 0;
+    background-color: lightgray;
+    padding: 0.2rem;
+    width: auto;
+}
+.boton-menu p {
+    color: black;
+    text-align: center;
+}
+.bienvenida {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bienvenida h1 {
+    margin-top: 10rem;
+    color: var(--naranja);
+}
+.dashlinea {
+    width: 100%;
+    position: relative;
+    bottom: auto;
+}
+/*ESTILO PACIENTES */
+#pacientes {
+    background-color: var(--azuloscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 5rem;
+}
+#pacientes img {
+    width: 200px;
+}
+#pacientes i {
+    color: black;
+    background-color: white;
+    border: 2px solid var(--azulclaro);
+    border-radius: 50%;
+    padding: 0.8rem;
+    margin: 0 0.5rem;
+}
+.formfranja {
+    width: 100%;
+}
+#guardar {
+    text-align: center;
+    background-color: var(--rojo);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.botonesform{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 7rem 0 7rem;
+}
+#titulo {
+    color: var(--azulclaro);
+    text-align: center;
+}
+.tabla{
+    padding-top: 1rem;
+}
+.tabla table{
+    margin: 2rem auto;
+}
+.tabla table, th, td {
+    border-collapse: collapse;
+    border: 2px solid var(--azulclaro);
+    padding: 0.5rem 3rem;
+}
+.tabla th {
+    color: white;
+    background-color: var(--azuloscuro);
+    font-weight: bold;
+}
+.tabla td {
+    background-color: lightgray;
+}
+
+/* ESTILOS REGISTRO*/
+
+#registro {
+    background-color: var(--azuloscuro);
+    color: white;
+    text-align: center;
+    font-weight: 500;
+
+}
+.usuarionuevo {
+    background-color: lightgray;
+    margin: 0 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#formregistro {
+    width: 800px;
+    margin: 0 5rem;
+    padding: 2rem;
+}
+#form-registro input {
+    margin: 0.2rem 5rem;
+    width: 300px;
+    border: 2px solid var(--azulclaro);
+    color: gray;
+}
+#form-registro select{
+    margin: 0.2rem 5rem;
+    width: 300px;
+    border: 2px solid var(--azulclaro);
+    color: gray;
+}
+.tituloform {
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    width: 100%;
+    background-color: var(--azulclaro);
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+#guardar {
+    width: 150px;
+    color: white;
+}

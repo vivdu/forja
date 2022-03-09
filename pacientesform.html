@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForjaEmpresas</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <script src="https://kit.fontawesome.com/ca7c98bafe.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header id="pacientes">
+        <div><img src="img/0. logoforja.png" alt="logo forja"></div>
+        <div><i class="fa-solid fa-house-user"></i>
+        <i class="fa-solid fa-power-off"></i></div>
+    </header>
+    <img class="formfranja" src="img/12. franja.svg" alt="franja">
+
+        <h2 id="registro">REGISTRO USUARIO NUEVO</h2>
+    <section class="usuarionuevo">
+        <div id="form-registro">
+        <form action="/form/submit" method="GET"> 
+            <input type="date" name="date" class="date" placeholder="Fecha registro">
+            <input type="search" name="search" class="search" value="Número registro"></div>
+        <label class="tituloform">DATOS DEL PACIENTE</label>  
+        <div id="form-registro"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre">
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+        <select name="identificacion" id="identificacion">
+            <option value="0">Tipo de identificacion</option>
+            <option value="1">Cedula</option></optgroup>
+            <option value="2">Tarjeta de identidad</option>
+            <option value="3">Permiso de residencia</option></optgroup>
+                    </select>
+        <input type="number" id="identif" name="identif" placeholder="Número de identificación">
+        <input type="number" id="edad" name="edad" placeholder="Edad">
+        <input type="date" name="date" class="date" placeholder="Fecha nacimiento"></div>
+        <label class="tituloform">INFORMACIÓN DE CONTACTO</label>
+        <!--seleccion del departamento, y de municipio-->
+        <div id="form-registro">
+            <select name="municipio" id="municipio">
+                <option value="0" selected>Elige un municipio</option>
+                <optgroup label="Bogotá">
+                <option value="1">Norte</option>
+                <option value="2">Centro</option>
+                <option value="3">Sur</option></optgroup>
+                <optgroup label="Fuera de Bogotá">
+                <option value="4">Soacha</option>
+                <option value="5">Chía</option>
+                <option value="6">Mosquera</option></optgroup>
+                <optgroup label="Otros municipios">
+                <option value="7">En Cundinamarca</option>
+                <option value="8">Resto del país</option></optgroup>
+                </select>
+                <select name="departamento" id="departamento">
+                    <option value="0" selected>Elige una región</option>
+                    <optgroup label="Centro">
+                    <option value="1">Antioquia</option>
+                    <option value="2">Santander</option>
+                    <option value="3">Otra</option></optgroup>
+                    <optgroup label="Caribe">
+                    <option value="4">Bolivar</option>
+                    <option value="5">Magdalena</option>
+                    <option value="6">Otro</option></optgroup>
+                    <optgroup label="Sur-oriente">
+                    <option value="7">Orinoquia</option>
+                    <option value="8">Amazonia</option></optgroup>
+                    </select>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+        <input type="number" id="telefono" name="telefono" placeholder="Teléfono fijo">
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
+        <input type="number" id="celular" name="celular" placeholder="Celular"></div>
+            
+        <label class="tituloform">ESTADO DE SALUD</label>
+        <!--COMORBILIDAD-DISCAPACIDAD-ALERGIAS-->
+        <p>¿El paciente se ha realizado la prueva covid con anterioridad y ha salido positiva?</p>
+        <!--boton de seleccion-->
+        <p>¿El paciente ha tenido contacto cercano con una persona sospechosa o confirmada con covid-19 en las últimas 2 semanas</p>
+        </form>
+    </div>
+   
+    </section>
+    <button id="guardar"><a href="index.html"><i class="fa-solid fa-user-plus"></i>  Guardar</a></button>
+    <footer>
+        <p>&#169; 2022 FORJA EMPRESAS</p>
+    </footer>
+</body>
+</html>
