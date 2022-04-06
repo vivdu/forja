@@ -11,30 +11,35 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    height: 100%;
+}
 a, a:hover, a:focus, a:active {
     cursor: pointer;
     text-decoration: none;
     font-size: bold;
+    color: white;
 }
-button {
+button, a {
     cursor: pointer;
 }
 /*ESTILOS INDEX*/
 
 header {
     display: flex;
-    height: 120px;
-}
-.logo-header{
-    flex-basis: 30%;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 1rem;
+}
+.logoforja {
+    max-width: 290px;
+    width: 100%;
 }
 .datos-header{
-    flex-basis: 70%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     font-size: smaller;
     font-weight: 400;
@@ -47,15 +52,18 @@ header {
     color: white;
     border-radius: 10px;
 }
-
+.line {
+    width: 100%;
+    margin: 1rem auto;
+}
 #baner-index{
     background-image: url(../img/2.\ medico.png);
-    background-position: center;
+    background-position: right;
     background-size: cover;
-    padding: 7rem 20rem 7rem 1rem;
+    padding: 0.5rem 5rem 0.5rem 0.2rem;
     text-align: center; 
 }
-#baner-index h2{ 
+#baner-index h3{ 
     color: var(--naranja);
 }
 .franja-index img{
@@ -66,20 +74,30 @@ header {
     background-position: center;
     background-size: contain;
     display: flex;
+    flex-direction: column;
 }
 .signos {
-    flex-basis: 50%;
-    padding: 3rem;
+  
+    padding: 3rem 3rem 0 3rem;
     background-color: rgba(255, 255, 255, 0.8);
 }
 .oms {
-    flex-basis: 50%;
-    padding: 3rem;
+
+    padding: 0 3rem 3rem 3rem;
     background-color: rgba(255, 255, 255, 0.8);
 }
 .oms img {
     text-align: center;
     width: 100px;
+}
+.curso-oms {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.curso-oms a {
+    color: var(--azulclaro);
 }
 #enlaces {
     background-color: darkslategray;
@@ -103,20 +121,21 @@ footer{
     background-image: url(../img/10.png);
     background-position: center;
     background-size: cover;
+    height: 100vh;
 }
 #iniciosesion {
-    margin: 5rem auto;
-    width: auto;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .caja-inicio {
-    padding: 0.5rem;
-    text-align: right;
+    padding: 1rem;
+    text-align: center;
 }
 .boton-inicio {
+    font-weight: 600;
     width: auto;
     height: 2.5rem;
     padding: 0.5rem;
@@ -126,51 +145,74 @@ footer{
 }
 .caja-sesion1 {
     padding: 1rem;
-    width: 400px;
+    max-width: 400px;
+    width: 90%;
     text-align: center;
     display: flexbox;
     flex-direction: column;
     background-color: var(--azulclaro);
-    border: 1px solid var(--azulclaro);
+    border: 3px solid var(--azuloscuro);
+    border-radius: 15px 15px 0px 0px;
+}
+.caja-sesion1 img {
+    margin-top: 1rem;
+    width: 90%;
 }
 .caja-sesion2 {
-    width: 400px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 90%;
     text-align: center;
     display: flexbox;
     flex-direction: column;
     background-color: white;
-    border: 1px solid var(--azulclaro);
+    border: 3px solid var(--azuloscuro);
+    border-radius: 0px 0px 15px 15px;
+
 }
 .caja-sesion2 form {
-    margin: 1rem auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .caja-sesion2 input {
     border: 1px solid var(--azulclaro);
+    border-radius: 5px;
+    width: 100%;
     margin: 0.5rem 1rem;
 }
-
+#dashbrd {
+    margin-top: 1rem;
+    font-weight: 600;
+    width: auto;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: var(--naranja);
+    color: white;
+    border-radius: 10px;
+}
 /* ESTILO DASHBOARD */
 
 #dashboard {
     display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 .menu {
-    flex-basis: 15%;
     background-color: var(--azuloscuro);
     text-align: center;
-    padding-bottom: 10rem;
+    padding: 0.5rem;
     display: flex;
-    flex-direction:column;
-    height: 100%;
+    flex-direction:row;
+    flex-wrap: wrap;
 }
 .menu img {
-    width: 200px;
-    margin: 5rem 1rem;
+    max-width: 250px;
+    width: 90%;
+    margin: 1rem 3rem;
 }
 .contenido {
-    flex-basis: 85%;
     background-image: url(../img/13.\ guerreros.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -178,10 +220,10 @@ footer{
 }
 .boton-menu {
     border: 2px solid var(--naranja);
-    border-radius: 15px;
-    margin: 1rem 0;
+    border-radius: 25px;
+    margin: 0.5rem auto;
+    padding: 0 1.5rem;
     background-color: lightgray;
-    padding: 0.2rem;
     width: auto;
 }
 .boton-menu p {
@@ -192,33 +234,49 @@ footer{
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    height: 50vh;
+}
+.bienvenida input {
+    border: 2px solid var(--azulclaro);
+    border-radius: 5px;
+    width: 90%;
+    margin: 0.5rem 1rem;
+}
+.search {
+    padding: 0.8rem;
+    margin-left: 1rem;
+    background-color: var(--azuloscuro);
+    color: white;
+    border-radius: 10px;
 }
 .bienvenida h1 {
-    margin-top: 10rem;
     color: var(--naranja);
 }
 .dashlinea {
     width: 100%;
     position: relative;
-    bottom: auto;
+    bottom: 0px;
 }
 /*ESTILO PACIENTES */
+
 #pacientes {
     background-color: var(--azuloscuro);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
-    height: 5rem;
+    padding: 1rem;
+    height: auto;
 }
 #pacientes img {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
 }
 #pacientes i {
-    color: black;
+    color: var(--azuloscuro);
     background-color: white;
-    border: 2px solid var(--azulclaro);
+    border: 2px solid var(--naranja);
     border-radius: 50%;
     padding: 0.8rem;
     margin: 0 0.5rem;
@@ -228,31 +286,41 @@ footer{
 }
 #guardar {
     text-align: center;
-    background-color: var(--rojo);
+    background-color: var(--naranja);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
 .botonesform{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    margin: 5rem 7rem 0 7rem;
+    margin: 2rem auto;
+}
+.botonesform input{
+    border: 2px solid var(--azulclaro);
+    border-radius: 5px;
+    width: 90%;
+    margin: 1rem 1rem;
+
 }
 #titulo {
     color: var(--azulclaro);
     text-align: center;
 }
 .tabla{
+    margin: 0 1rem;
+    overflow-x:auto;
     padding-top: 1rem;
 }
 .tabla table{
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 .tabla table, th, td {
     border-collapse: collapse;
     border: 2px solid var(--azulclaro);
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 2rem;
 }
 .tabla th {
     color: white;
@@ -260,7 +328,27 @@ footer{
     font-weight: bold;
 }
 .tabla td {
+    text-align: center;
     background-color: lightgray;
+}
+.editar {
+    margin-bottom: 0.5rem;
+    font-size: small;
+    height: 2rem;
+    padding: 0.5rem;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    width: auto;
+}
+.eliminar {
+    font-size: small;
+    height: 2rem;
+    padding: 0.5rem;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: auto;
 }
 
 /* ESTILOS REGISTRO*/
@@ -269,33 +357,55 @@ footer{
     background-color: var(--azuloscuro);
     color: white;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: larger;
+    width: auto;
 
 }
 .usuarionuevo {
+    margin: 0.5rem;
+    max-width: 1000px;
+    width: auto;
     background-color: lightgray;
-    margin: 0 10rem;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-content: center;
 }
-#formregistro {
-    width: 800px;
-    margin: 0 5rem;
+.formregistro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 1rem;
     padding: 2rem;
 }
-#form-registro input {
-    margin: 0.2rem 5rem;
-    width: 300px;
+.form-registro h3 {
+    width: auto;
+}
+.form-registro input {
+    border: 2px solid var(--azulclaro);
+    border-radius: 5px;
+    max-width: 400px;
+    width: 90%;
+    margin: 0.5rem 1rem;
+    color: gray;
+}
+.form-registro select{
+    margin: 0.2rem 1rem;
+    max-width: 400px;
+    width: 90%;
     border: 2px solid var(--azulclaro);
     color: gray;
 }
-#form-registro select{
-    margin: 0.2rem 5rem;
-    width: 300px;
-    border: 2px solid var(--azulclaro);
-    color: gray;
+.form-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form-item p {
+    margin: 1rem 2rem;
 }
 .tituloform {
     margin: 1rem auto;
@@ -308,7 +418,296 @@ footer{
     text-align: center;
     font-weight: 500;
 }
-#guardar {
-    width: 150px;
+#guardarform {
+    margin: 1rem auto;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: green;
     color: white;
+    border-radius: 10px;
+    width: auto;
 }
+
+
+
+
+
+
+
+/*ANIMACION*/
+#baner-index {
+    animation: index 1s ease-in 0.5s 1;
+}
+.caja-sesion1 {
+    animation: login 3s ease-in 0.5s 1;
+}
+.caja-sesion2 {
+    animation: login 3s ease-in 0.5s 1;
+}
+@keyframes login {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+    70% {
+        opacity: 0.8;
+        transform: translateY(0px);
+    }
+}
+@keyframes index {
+    0% {
+        transition: all 1s;
+        transform: scale(0.8);
+    }
+	}
+
+.boton-menu {
+		animation-name: slide;
+		animation-duration: 3s;
+		animation-timing-function: normal;
+		animation-delay: 0.5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+		animation-play-state: running;
+	}
+
+@keyframes slide {
+		from {
+			margin-left: -100vh;
+			width: auto;
+            opacity: 0;
+		}
+		to {
+			margin-left: 0;
+			width: auto;
+            opacity: 1;
+		}
+	}
+.tabla td {
+        animation: change-background 3s ease-in-out 1; 
+
+      }
+
+      @keyframes change-background {
+        0% {
+          background: rgba(80, 96, 168, 0.5);
+        }
+        50% {
+          background: rgba(98, 171, 180, 0.4);
+        }
+        100% {
+          background: rgba(89, 158, 104, 0.3);
+        }
+      }
+
+    /* MEDIA QUERY */
+
+@media screen and (min-width: 560px){
+   header {
+       display: flex;
+       flex-direction: row;
+   } 
+   .logo-header{
+    flex-basis: 45%;
+    display: flex;
+}
+    .datos-header{
+    flex-basis: 55%;
+    display: flex;
+    flex-wrap: wrap;}
+    #baner-index {
+    padding: 7rem 20rem 7rem 1rem;
+    }
+    .signos {
+        flex-basis: 50%;
+    }
+    .oms {
+        flex-basis: 50%;
+    }
+    
+    #dashboard {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu {
+        background-color: var(--azuloscuro);
+        text-align: center;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+    .menu img {
+        max-width: 300px;
+        width: 90%;
+        margin: 1rem;
+    }
+    .contenido {
+        background-image: url(../img/13.\ guerreros.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .boton-menu {
+        border: 2px solid var(--naranja);
+        border-radius: 25px;
+        margin: 3rem auto;
+        padding: 0 2.5rem;
+        background-color: lightgray;
+        width: auto;
+    }
+    .boton-menu p {
+        color: black;
+        text-align: center;
+    }
+    .bienvenida {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    #pacientes {
+        display: flex;
+        flex-direction: row;
+    }
+    .botonesform{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5rem 7rem 0 7rem;
+    }
+}
+@media screen and (min-width: 1024px){
+    header {
+        display: flex;
+        flex-direction: row;
+    } 
+    .logo-header{
+     flex-basis: 40%;
+     display: flex;
+ }
+     .datos-header{
+     flex-basis: 60%;
+     display: flex; }
+    .datos-header {
+        display: flex;
+        flex-direction: row;
+    }
+    #sintomas {
+        display: flex;
+        flex-direction: row;
+    }
+    .signos {
+  
+        padding: 3rem;
+    }
+    .oms {
+    
+        padding: 3rem;}
+
+    #baner-index {
+        padding: 7rem 20rem 7rem 1rem;
+    
+        }
+        .tabla table{
+            margin: 2rem auto;
+        }
+        .tabla table, th, td {
+            border-collapse: collapse;
+            border: 2px solid var(--azulclaro);
+            padding: 0.5rem 3rem;
+        }
+        .tabla th {
+            color: white;
+            background-color: var(--azuloscuro);
+            font-weight: bold;
+        }
+        .tabla td {
+            background-color: lightgray;
+        }
+        #registro {
+            background-color: var(--azuloscuro);
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            font-size: larger;
+            width: auto;
+        
+        }
+        .usuarionuevo {
+            background-color: lightgray;
+            margin: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .formregistro {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+        }
+        .form-registro input {
+            margin: 0.2rem 5rem;
+            width: 300px;
+            border: 2px solid var(--azulclaro);
+            color: gray;
+        }
+        .form-registro select{
+            margin: 0.2rem 5rem;
+            width: 300px;
+            border: 2px solid var(--azulclaro);
+            color: gray;
+        }
+}
+@media screen and (min-width: 1200px){
+    body {
+        max-width: 1500px;
+    }
+    #baner-index {
+        padding: 7rem 20rem 7rem 1rem;
+    
+        }
+}
+ 
+
+
+
+/*slide radio
+section id slider
+input type radio name slider id slider1 checked
+input type radio name slider id slide2
+
+div id slides
+div class inner
+div class slide slide-1
+div class slide-content
+h2 p
+div class control
+<labe for slide11 1234
+div class bullet
+label for slide1
+ css
+ slider label cursor pointer
+ slider input [type radio]
+ slider:checked 
+
+ slides inner
+ width 400%
+ height 300px
+ display flex
+ transition margin left 1 s cubic-bezier
+
+ slides .slide
+ width 25%
+ display flex
+
+*/

@@ -13,8 +13,8 @@
 <body>
     <header id="pacientes">
         <div><img src="img/0. logoforja.png" alt="logo forja"></div>
-        <div><i class="fa-solid fa-house-user"></i>
-        <i class="fa-solid fa-power-off"></i></div>
+        <div><a href="index.html"><i class="fa-solid fa-house-user"></i></a>
+        <a href="login.html"><i class="fa-solid fa-power-off"></i></a></div>
     </header>
     <img class="formfranja" src="img/12. franja.svg" alt="franja">
 
@@ -22,11 +22,13 @@
         <button id="guardar"><a href="pacientesform.html"><i class="fa-solid fa-user-plus"></i>Agregar</a></button>
         <form action="/index.html" method="GET"> 
             <input type="search" name="search" id="search" placeholder="Número de documento">
-            <button><a href="pacientesform.html"><i class="fa-solid fa-magnifying-glass"></i></a></button>
         </form>
+        <button class="search"><a href="pacientesform.html"><i class="fa-solid fa-magnifying-glass"></i></a></button>
+
     </section>
         <h2 id="titulo">PACIENTES</h2>
     <section class="tabla">
+        <div class="highlight"></div>
         <table>
             <tr><th># DE REGISTRO</th>
                 <th># DOCUMENTO</th>
@@ -40,8 +42,8 @@
                 <td>Pablo</td>
                 <td>Llanes</td>
                 <td>55</td>
-                <td><button>Editar</button>
-                <button>Eliminar</button></td>
+                <td><button class="editar"><i class="fa-solid fa-pencil"></i> Editar</button>
+                <button class="eliminar">Eliminar</button></td>
             </tr>
             <tr>
                 <td>172633</td>
@@ -49,8 +51,8 @@
                 <td>Nancy</td>
                 <td>Cómbita</td>
                 <td>43</td>
-                <td><button>Editar</button>
-                    <button>Eliminar</button></td>
+                <td><button class="editar"><i class="fa-solid fa-pencil"></i> Editar</button>
+                    <button class="eliminar">Eliminar</button></td>
             </tr>
             <tr>
                 <td>542261</td>
@@ -58,8 +60,8 @@
                 <td>Paola</td>
                 <td>Guerrero</td>
                 <td>28</td>
-                <td><button>Editar</button>
-                    <button>Eliminar</button></td>
+                <td><button class="editar"><i class="fa-solid fa-pencil"></i> Editar</button>
+                    <button class="eliminar">Eliminar</button></td>
             </tr>
             <tr>
                 <td>999888</td>
@@ -67,8 +69,8 @@
                 <td>Juan</td>
                 <td>Osorio</td>
                 <td>15</td>
-                <td><button>Editar</button>
-                    <button>Eliminar</button></td>
+                <td><button class="editar"><i class="fa-solid fa-pencil"></i> Editar</button>
+                    <button class="eliminar">Eliminar</button></td>
             </tr>
             <tr>
                 <td>433231</td>
@@ -76,8 +78,8 @@
                 <td>Maria</td>
                 <td>Perez</td>
                 <td>37</td>
-                <td><button>Editar</button>
-                    <button>Eliminar</button></td>
+                <td><button class="editar"><i class="fa-solid fa-pencil"></i> Editar</button>
+                    <button class="eliminar">Eliminar</button></td>
             </tr>
             <tr>
                 <td>655443</td>
@@ -85,8 +87,8 @@
                 <td>Tomas</td>
                 <td>Mendez</td>
                 <td>48</td>
-                <td><button>Editar</button>
-                    <button>Eliminar</button></td>
+                <td><button class="editar"><i class="fa-solid fa-pencil"></i> Editar</button>
+                    <button class="eliminar">Eliminar</button></td>
             </tr>
         </table>
     </section>
