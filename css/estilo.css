@@ -670,7 +670,8 @@ footer{
 }
 @media screen and (min-width: 1200px){
     body {
-        max-width: 1500px;
+        margin: 0 auto;
+        max-width: 2500px;
     }
     #baner-index {
         padding: 7rem 20rem 7rem 1rem;
