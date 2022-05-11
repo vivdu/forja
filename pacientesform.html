@@ -30,22 +30,22 @@
                 <input type="search" name="search" class="searchbar" value="Número registro">
             </div>
 
-            <form action="/form/submit" method="GET">
+            <form action="pacientesform.html" method="GET">
                 <h3 class="tituloform">DATOS DEL PACIENTE</h3>
                 </div>
-                <div class="form-item"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre">
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-                    <select name="identificacion" id="identificacion">
-                        <option value="0">Tipo de identificacion</option>
+                <div class="form-item"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre" pattern="[a-zA-Z0-9]+" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" pattern="[a-zA-Z0-9]+" required>
+                    <select name="identificacion" id="identificacion" pattern="[0-9]{10}" required>
+                        <option value="0">Tipo de identificación</option>
                         <option value="1">Cedula</option>
                         </optgroup>
                         <option value="2">Tarjeta de identidad</option>
                         <option value="3">Permiso de residencia</option>
                         </optgroup>
                     </select>
-                    <input type="number" id="identif" name="identif" placeholder="Número de identificación">
-                    <input type="number" id="edad" name="edad" placeholder="Edad">
-                    <input type="date" name="date" class="date" placeholder="Fecha nacimiento">
+                    <input type="number" id="identif" name="identif" placeholder="Número de identificación" pattern="[0-9]{10}" required>
+                    <input type="number" id="edad" name="edad" placeholder="Edad" pattern="[0-9]{2}" required>
+                    <input type="date" name="date" class="date" placeholder="Fecha nacimiento" required>
                 </div>
                 <h3 class="tituloform">INFORMACIÓN DE CONTACTO</h3>
                 <div class="form-item">
@@ -83,10 +83,10 @@
                             <option value="8">Amazonia</option>
                         </optgroup>
                     </select>
-                    <input type="text" id="direccion" name="direccion" placeholder="Dirección">
-                    <input type="number" id="telefono" name="telefono" placeholder="Teléfono fijo">
-                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
-                    <input type="number" id="celular" name="celular" placeholder="Celular">
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
+                    <input type="number" id="telefono" name="telefono" placeholder="Teléfono fijo" pattern="/^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/" required>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <input type="number" id="celular" name="celular" placeholder="Celular" pattern="/^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/" required>
                 </div>
 
                 <h3 class="tituloform">ESTADO DE SALUD</h3>
@@ -103,10 +103,12 @@
                 <input type="radio" id="no" name="prueva" value="no">
                 <label for="no">No</label>
                 </div>
+        
+                <button type="submit" id="guardarform"><i class="fa-solid fa-user-plus"></i> Guardar</button>
+
             </form>
 
         </article>
-        <button id="guardarform"><a href="index.html"><i class="fa-solid fa-user-plus"></i> Guardar</a></button>
 
     </section>
     <footer>

@@ -7,7 +7,7 @@ button.onclick=()=>{
     var search=document.getElementById("usersearch").value;
 
     if (user1==search){
-        var result=confirm("El paciente con documento: "+search+" solo presenta una dosis de la vacuna Sinovac. Será redirigido al formulario de vacunación")
+        var result=confirm("El paciente con documento: "+search+" solo presenta una dosis de la vacuna Sinovac. Será redirigido para editar su información")
         
         switch (result){
         case true: window.location.assign("pacientes.html")
@@ -19,7 +19,7 @@ button.onclick=()=>{
         }
     }    
     else if (user2==search){
-        var result=confirm("El paciente con documento: "+search+" presenta dos dosis de la vacuna Moderna. Será redirigido al formulario de vacunación")
+        var result=confirm("El paciente con documento: "+search+" presenta dos dosis de la vacuna Moderna. Será redirigido para agregar su siguiente dosis")
         
         switch (result){
             case true: window.location.assign("pacientes.html")
@@ -43,7 +43,7 @@ button.onclick=()=>{
         }
     }
     else if (user4==search){
-    var result=confirm("El paciente con documento: "+search+" no tiene vacunas registradas, será redirigido al formulario")
+    var result=confirm("El paciente con documento: "+search+" no tiene vacunas registradas, será redirigido al formulario para creación de usuario")
     switch (result){
         case true: window.location.assign("pacientesform.html")
         alert("ke?")    

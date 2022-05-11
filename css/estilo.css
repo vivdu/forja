@@ -436,13 +436,13 @@ footer{
 
 /*ANIMACION*/
 #baner-index {
-    animation: index 1s ease-in 0.5s 1;
+    animation: index 1s ease-in 0s 1;
 }
 .caja-sesion1 {
-    animation: login 3s ease-in 0.5s 1;
+    animation: login 3s ease-in 0s 1;
 }
 .caja-sesion2 {
-    animation: login 3s ease-in 0.5s 1;
+    animation: login 3s ease-in 0s 1;
 }
 @keyframes login {
     0% {
@@ -469,7 +469,7 @@ footer{
 		animation-name: slide;
 		animation-duration: 3s;
 		animation-timing-function: normal;
-		animation-delay: 0.5s;
+		animation-delay: 0s;
 		animation-iteration-count: 1;
 		animation-direction: normal;
 		animation-fill-mode: none;
