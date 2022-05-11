@@ -11,10 +11,8 @@ button.onclick=()=>{
         
         switch (result){
         case true: window.location.assign("pacientes.html")
-        alert("ke?")    
         break;
         case false: window.location.assign("dashboard.html")
-        alert("ke?") 
         break;
         }
     }    
@@ -22,11 +20,9 @@ button.onclick=()=>{
         var result=confirm("El paciente con documento: "+search+" presenta dos dosis de la vacuna Moderna. Será redirigido para agregar su siguiente dosis")
         
         switch (result){
-            case true: window.location.assign("pacientes.html")
-            alert("ke?")    
+            case true: window.location.assign("pacientes.html")    
             break;
             case false: window.location.assign("dashboard.html")
-            alert("ke?") 
             break;
             }
     }
@@ -35,10 +31,8 @@ button.onclick=()=>{
     
     switch (result){
         case true: window.location.assign("dashboard.html")
-        alert("ke?")    
         break;
         case false: window.location.assign("dashboard.html")
-        alert("ke?") 
         break;
         }
     }
@@ -46,10 +40,8 @@ button.onclick=()=>{
     var result=confirm("El paciente con documento: "+search+" no tiene vacunas registradas, será redirigido al formulario para creación de usuario")
     switch (result){
         case true: window.location.assign("pacientesform.html")
-        alert("ke?")    
         break;
         case false: window.location.assign("dashboard.html")
-        alert("ke?") 
         break;
         }
 }
