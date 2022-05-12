@@ -52,3 +52,5 @@ button.onclick=()=>{
         console.log("caso4") 
         break;
         }
+    }
+}
