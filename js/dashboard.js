@@ -11,10 +11,10 @@ button.onclick=()=>{
         
         switch (result){
         case true: window.location.assign("pacientes.html")
-        alert("ke?")    
+        alert("Direccionando")  
         break;
         case false: window.location.assign("dashboard.html")
-        alert("ke?") 
+        console.log("caso1")
         break;
         }
     }    
@@ -23,10 +23,10 @@ button.onclick=()=>{
         
         switch (result){
             case true: window.location.assign("pacientes.html")
-            alert("ke?")    
+            alert("Direccionando")    
             break;
             case false: window.location.assign("dashboard.html")
-            alert("ke?") 
+            console.log("caso2") 
             break;
             }
     }
@@ -35,10 +35,10 @@ button.onclick=()=>{
     
     switch (result){
         case true: window.location.assign("dashboard.html")
-        alert("ke?")    
+        alert("Direccionando")    
         break;
         case false: window.location.assign("dashboard.html")
-        alert("ke?") 
+        console.log("caso3") 
         break;
         }
     }
@@ -46,10 +46,10 @@ button.onclick=()=>{
     var result=confirm("El paciente con documento: "+search+" no tiene vacunas registradas, será redirigido al formulario para creación de usuario")
     switch (result){
         case true: window.location.assign("pacientesform.html")
-        alert("ke?")    
+        alert("Direccionando")    
         break;
         case false: window.location.assign("dashboard.html")
-        alert("ke?") 
+        console.log("caso4") 
         break;
         }
 }
