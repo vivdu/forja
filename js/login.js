@@ -1,8 +1,7 @@
+let buttonlog=document.getElementById("dashbrd");
+let admin="Admin", password="Kuepa2022";
 
-var button=document.getElementById("dashbrd");
-var admin="Admin", password="Kuepa2022";
-
-button.onclick=()=>{
+buttonlog.onclick=()=>{
 let user=document.getElementById("user").value;
 let userpass=document.getElementById("password").value;
 
@@ -16,5 +15,6 @@ else if (user==admin || password==userpass) {
 else {
     console.log("Acceso denegado")
     window.alert("Error de credenciales")
+    
 }
 }

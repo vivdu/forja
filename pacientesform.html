@@ -26,30 +26,30 @@
     <section class="usuarionuevo">
         <article class="form-registro">
             <div class="form-item">
-                <input type="date" name="date" class="date" placeholder="Fecha registro">
-                <input type="search" name="search" class="searchbar" value="Número registro">
+                <input type="date" name="date" class="date" placeholder="Fecha registro"><i class="fa-solid fa-xmark"></i>
+                <input type="search" name="search" class="searchbar" placeholder="Número de registro"><i class="fa-solid fa-xmark"></i>
             </div>
 
-            <form action="pacientesform.html" method="GET">
+            <form id="form-usuario" action="pacientesform.html" method="GET">
                 <h3 class="tituloform">DATOS DEL PACIENTE</h3>
                 </div>
-                <div class="form-item"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre" pattern="[a-zA-Z0-9]+" required>
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" pattern="[a-zA-Z0-9]+" required>
-                    <select name="identificacion" id="identificacion" pattern="[0-9]{10}" required>
+                <div class="form-item"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre"><i class="fa-solid fa-xmark"></i>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido"><i class="fa-solid fa-xmark"></i>
+                    <select name="identificacion" id="identificacion">
                         <option value="0">Tipo de identificación</option>
                         <option value="1">Cedula</option>
                         </optgroup>
                         <option value="2">Tarjeta de identidad</option>
                         <option value="3">Permiso de residencia</option>
                         </optgroup>
-                    </select>
-                    <input type="number" id="identif" name="identif" placeholder="Número de identificación" pattern="[0-9]{10}" required>
-                    <input type="number" id="edad" name="edad" placeholder="Edad" pattern="[0-9]{2}" required>
-                    <input type="date" name="date" class="date" placeholder="Fecha nacimiento" required>
+                    </select><i class="fa-solid fa-xmark"></i>
+                    <input type="number" id="identif" name="identif" placeholder="Número de identificación"><i class="fa-solid fa-xmark"></i>
+                    <input type="number" id="edad" name="edad" placeholder="Edad"><i class="fa-solid fa-xmark"></i>
+                    <input type="date" name="date" class="date" placeholder="Fecha nacimiento"><i class="fa-solid fa-xmark"></i>
                 </div>
                 <h3 class="tituloform">INFORMACIÓN DE CONTACTO</h3>
                 <div class="form-item">
-                    <select name="municipio" id="municipio">
+                    <select name="municipio" id="municipio"><i class="fa-solid fa-xmark"></i>
                         <option value="0" selected>Elige un municipio</option>
                         <optgroup label="Bogotá">
                             <option value="1">Norte</option>
@@ -65,7 +65,7 @@
                             <option value="7">En Cundinamarca</option>
                             <option value="8">Resto del país</option>
                         </optgroup>
-                    </select>
+                    </select><i class="fa-solid fa-xmark"></i>
                     <select name="departamento" id="departamento">
                         <option value="0" selected>Elige una región</option>
                         <optgroup label="Centro">
@@ -82,26 +82,23 @@
                             <option value="7">Orinoquia</option>
                             <option value="8">Amazonia</option>
                         </optgroup>
-                    </select>
-                    <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
-                    <input type="number" id="telefono" name="telefono" placeholder="Teléfono fijo" pattern="/^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/" required>
-                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                    <input type="number" id="celular" name="celular" placeholder="Celular" pattern="/^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/" required>
+                    </select><i class="fa-solid fa-xmark"></i>
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección"><i class="fa-solid fa-xmark"></i>
+                    <input type="number" id="telefono" name="telefono" placeholder="Teléfono fijo"><i class="fa-solid fa-xmark"></i>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico"><i class="fa-solid fa-xmark"></i>
+                    <input type="number" id="celular" name="celular" placeholder="Celular"><i class="fa-solid fa-xmark"></i>
                 </div>
 
                 <h3 class="tituloform">ESTADO DE SALUD</h3>
-                <div class="form-item">
-                <p>¿El paciente se ha realizado la prueva covid con anterioridad y ha salido positiva?</p>
-                <input type="radio" id="si" name="prueva" value="si">
-                <label for="si"> Si</label><br>
-                <input type="radio" id="no" name="prueva" value="no">
-                <label for="no">No</label>
+                <div class="form-itemradio">
+                <p>¿El paciente se ha realizado la prueba covid con anterioridad y ha salido positiva?  <i class="fa-solid fa-xmark"></i></p>
+                <label for="si"><input type="radio" id="si" name="prueba" value="si">  Si </label><br>
+                <label for="no"><input type="radio" id="no" name="prueba" value="no"> No</label></div>
+                <div class="form-itemradio">
                 <p>¿El paciente ha tenido contacto cercano con una persona sospechosa o confirmada con covid-19 en las
-                    últimas 2 semanas</p>
-                <input type="radio" id="si" name="prueva" value="si">
-                <label for="si"> Si</label><br>
-                <input type="radio" id="no" name="prueva" value="no">
-                <label for="no">No</label>
+                    últimas 2 semanas?  <i class="fa-solid fa-xmark"></i></p>
+                <label for="si"><input type="radio" id="si1" name="prueba1" value="si">  Si </label><br>
+                <label for="no"><input type="radio" id="no1" name="prueba1" value="no"> No</label>
                 </div>
         
                 <button type="submit" id="guardarform"><i class="fa-solid fa-user-plus"></i> Guardar</button>
@@ -114,6 +111,8 @@
     <footer>
         <p>&#169; 2022 FORJA EMPRESAS</p>
     </footer>
+
+    <script type="text/javascript" src="js/pacientesform.js"></script>
 </body>
 
 </html>
