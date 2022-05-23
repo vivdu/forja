@@ -25,15 +25,15 @@
 
     <section class="usuarionuevo">
         <article class="form-registro">
-            <div class="form-item">
-                <input type="date" name="date" class="date" placeholder="Fecha registro"><i class="fa-solid fa-xmark"></i>
-                <input type="search" name="search" class="searchbar" placeholder="Número de registro"><i class="fa-solid fa-xmark"></i>
+            <div class="form-item" id="form-item">
+                <input type="date" name="date" id="date" placeholder="Fecha registro"><i class="fa-solid fa-xmark"></i>
+                <input type="search" name="search" id="searchbar" placeholder="Número de registro"><i class="fa-solid fa-xmark"></i>
             </div>
 
-            <form id="form-usuario" action="pacientesform.html" method="GET">
+            <form id="frm-usuario" action="pacientesform.html" method="GET">
                 <h3 class="tituloform">DATOS DEL PACIENTE</h3>
                 </div>
-                <div class="form-item"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre"><i class="fa-solid fa-xmark"></i>
+                <div class="form-item" id="form-item"><input type="text" id="nombre" name="nombre" placeholder="Escriba el nombre"><i class="fa-solid fa-xmark"></i><i class="fa-solid fa-circle-check"></i>
                     <input type="text" id="apellido" name="apellido" placeholder="Apellido"><i class="fa-solid fa-xmark"></i>
                     <select name="identificacion" id="identificacion">
                         <option value="0">Tipo de identificación</option>
@@ -43,12 +43,12 @@
                         <option value="3">Permiso de residencia</option>
                         </optgroup>
                     </select><i class="fa-solid fa-xmark"></i>
-                    <input type="number" id="identif" name="identif" placeholder="Número de identificación"><i class="fa-solid fa-xmark"></i>
+                    <input type="number" id="idnumero" name="idnumero" placeholder="Número de identificación"><i class="fa-solid fa-xmark"></i>
                     <input type="number" id="edad" name="edad" placeholder="Edad"><i class="fa-solid fa-xmark"></i>
-                    <input type="date" name="date" class="date" placeholder="Fecha nacimiento"><i class="fa-solid fa-xmark"></i>
+                    <input type="date" name="date" id="datebrth" placeholder="Fecha nacimiento"><i class="fa-solid fa-xmark"></i>
                 </div>
                 <h3 class="tituloform">INFORMACIÓN DE CONTACTO</h3>
-                <div class="form-item">
+                <div class="form-item" id="form-item">
                     <select name="municipio" id="municipio"><i class="fa-solid fa-xmark"></i>
                         <option value="0" selected>Elige un municipio</option>
                         <optgroup label="Bogotá">
@@ -90,7 +90,7 @@
                 </div>
 
                 <h3 class="tituloform">ESTADO DE SALUD</h3>
-                <div class="form-itemradio">
+                <div class="form-itemradio" id="form-item">
                 <p>¿El paciente se ha realizado la prueba covid con anterioridad y ha salido positiva?  <i class="fa-solid fa-xmark"></i></p>
                 <label for="si"><input type="radio" id="si" name="prueba" value="si">  Si </label><br>
                 <label for="no"><input type="radio" id="no" name="prueba" value="no"> No</label></div>
@@ -104,7 +104,9 @@
                 <button type="submit" id="guardarform"><i class="fa-solid fa-user-plus"></i> Guardar</button>
 
             </form>
-
+            <div class="frm-no-enviado" id="frm-no-enviado">
+                <p>El formulario tiene campos por corregir</p>
+            </div>
         </article>
 
     </section>
